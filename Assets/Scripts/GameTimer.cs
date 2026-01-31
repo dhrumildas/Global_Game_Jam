@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -24,11 +24,11 @@ public class GameTimer : MonoBehaviour
         elapsed += Time.deltaTime;
 
         float t = Mathf.Clamp01(elapsed / GameDuration);
-        float currentGameHour = START_HOUR + TOTAL_HOURS + t;
+        float currentGameHour = START_HOUR + TOTAL_HOURS * t;
 
         UpdateTimerText(currentGameHour);
 
-        if (elapsed >= currentGameHour)
+        if (elapsed >= GameDuration)
         {
             isTimerRunning = false;
             OnDayEnded();
