@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VanishTrigger : MonoBehaviour
@@ -8,11 +6,16 @@ public class VanishTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(exitTag))
+        if (!other.CompareTag(exitTag)) return;
+
+        // Get NPC from parent/root safely
+        NPC npc = GetComponentInParent<NPC>();
+        if (npc != null && npc.wasClicked == false)
         {
-            // Destroy the whole NPC (parent), not just the trigger child
-            Destroy(transform.root.gameObject);
-            Debug.Log("NPC bye bye");
+            NPC_Events.RaiseNpcReachedExit(npc);
         }
+
+        Destroy(transform.root.gameObject);
+        Debug.Log("NPC has vanished upon reaching the exit.");
     }
 }

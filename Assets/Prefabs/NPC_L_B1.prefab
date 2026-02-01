@@ -101,9 +101,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9042140483493147918}
   - component: {fileID: 4616098596105788259}
-  - component: {fileID: 5901469092695344168}
   - component: {fileID: 7410387774178895953}
   - component: {fileID: 5693781068354662074}
+  - component: {fileID: -5014078038264123837}
   m_Layer: 0
   m_Name: NPC_L_B1
   m_TagString: Untagged
@@ -179,20 +179,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5901469092695344168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5298987443284210921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 321966eca7b519849a156248dacc6c6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  move: 1
 --- !u!61 &7410387774178895953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,3 +251,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5014078038264123837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298987443284210921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d7cf741e39ea141bbfbaacd2b57512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 1
+  speed: 2
+  move: 1
+  maskType: 0
