@@ -4091,7 +4091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 710546525}
-  GameDuration: 180
+  GameDuration: 90
   elapsed: 0
 --- !u!114 &1644855027
 MonoBehaviour:

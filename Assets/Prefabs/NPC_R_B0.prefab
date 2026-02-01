@@ -173,9 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  speed: 2
   move: 1
   maskType: 1
+  npcColor: 1
+  wasClicked: 0
 --- !u!1 &8158969687032499834
 GameObject:
   m_ObjectHideFlags: 0
