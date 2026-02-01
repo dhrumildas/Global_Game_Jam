@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private MovementDirection direction;
-    [SerializeField] private float speed = 2f;
+    private float speed = 1.25f;
     private Vector2 moveVector;
     private SpriteRenderer spriteRenderer;
     [SerializeField] private bool move = true;

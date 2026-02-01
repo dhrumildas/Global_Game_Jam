@@ -20,8 +20,8 @@ public class ForceSpawn : MonoBehaviour
     
     private GameTimer Timer;
     private GameObject[] SpawnerArray;
-    private int[] ForceSeed = new int[20];
-    private int[] SpawnerDecision = new int[20];
+    private int[] ForceSeed = new int[10];
+    private int[] SpawnerDecision = new int[10];
     private int ForceSpawnCounter;
     private int PreventOvershoot;
     private bool found;
@@ -32,9 +32,9 @@ public class ForceSpawn : MonoBehaviour
         Timer = FindFirstObjectByType<GameTimer>();
         ForceSpawnCounter = 0;
         SpawnerArray = new GameObject[8] {SP1, SP2, SP3, SP4, SP5, SP6, SP7, SP8};
-        for (int x=0; x<20; x++)
+        for (int x=0; x<10; x++)
         {
-            ForceSeed[x] = Random.Range(((x*8)+1), ((x+1)*8));
+            ForceSeed[x] = Random.Range(((x*6)+1), ((x+1)*6));
             SpawnerDecision[x] = Random.Range(1,8);
         }
         Debug.Log(string.Join(", ", ForceSeed));
