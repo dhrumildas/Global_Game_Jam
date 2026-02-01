@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FailScene.unity
     guid: bb5e809ba2262d641b977fa7e6b861f9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StageTwoScene.unity
     guid: c4c1b29089ca47149a82f98587ea6d6e
   m_configObjects: {}

@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  speed: 2
   move: 1
   maskType: 0
+  npcColor: 1
+  wasClicked: 0

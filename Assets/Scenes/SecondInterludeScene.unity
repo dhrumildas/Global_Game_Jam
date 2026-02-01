@@ -714,8 +714,8 @@ MonoBehaviour:
     wearing mask, notice the law enforcers if you see anyone in red coat.\n\n    
     Best Regards,\n     Corpo Lisserop\n     \n      \n      \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 03d2a9697b6b5c84e9d27d3a708b5746, type: 2}
-  m_sharedMaterial: {fileID: -4477904316533174893, guid: 03d2a9697b6b5c84e9d27d3a708b5746, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 101218e6daceda54eb4037ca026b6a4c, type: 2}
+  m_sharedMaterial: {fileID: -6421262269967256913, guid: 101218e6daceda54eb4037ca026b6a4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1113,9 +1113,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1275540764}
-        m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
-        m_MethodName: OnPlayClicked
+      - m_Target: {fileID: 1275540765}
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: NextSceneButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
