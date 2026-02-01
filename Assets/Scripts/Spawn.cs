@@ -12,21 +12,59 @@ public class Spawn : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private float minSpawnTime = 1.5f;
     [SerializeField] private float maxSpawnTime = 2.5f;
+
+    private Coroutine spawnRoutine;
+    private bool isSpawning = true;
+    private GameTimer gameTimer;
+
+    private void Awake()
+    {
+        gameTimer = FindFirstObjectByType<GameTimer>();
+    }
+
+    private void OnEnable()
+    {
+        if (gameTimer != null)
+        {
+            gameTimer.DayEnded += StopSpawning;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (gameTimer != null)
+        {
+            gameTimer.DayEnded -= StopSpawning;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnLoop());
+        spawnRoutine = StartCoroutine(SpawnLoop());
     }
 
     private IEnumerator SpawnLoop()
     {
-        while (true)
+        while (isSpawning)
         {
             float waitTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(waitTime);
 
+            if(!isSpawning) yield break;
             SpawnNpc();
         }
+    }
+
+    public void StopSpawning()
+    {
+        isSpawning = false;
+        if (spawnRoutine != null)
+        {
+            StopCoroutine(spawnRoutine);
+            spawnRoutine = null;
+        }
+        Debug.Log("Spawning Stopped");
     }
 
     private void SpawnNpc()
