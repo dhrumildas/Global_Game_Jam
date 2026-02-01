@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: fab462cdf39437a489af60fb333ffb33
+  - enabled: 1
+    path: Assets/Scenes/FirstInterludeScene.unity
+    guid: db45b820b0bf7664a83e2696fb631be1
+  - enabled: 1
+    path: Assets/Scenes/SuccessScene.unity
+    guid: f6c31b168352d5640a943a6e9f4cdcc3
+  - enabled: 1
+    path: Assets/Scenes/SecondStageScene.unity
+    guid: 198e4187d7b554748abedf8e9834c02c
+  - enabled: 1
+    path: Assets/Scenes/SecondInterludeScene.unity
+    guid: 2e73afcd500984e44a8cea6f3544a259
+  - enabled: 1
+    path: Assets/Scenes/FailScene.unity
+    guid: bb5e809ba2262d641b977fa7e6b861f9
   m_configObjects: {}

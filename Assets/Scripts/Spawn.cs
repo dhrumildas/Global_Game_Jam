@@ -12,6 +12,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private float minSpawnTime = 1.5f;
     [SerializeField] private float maxSpawnTime = 2.5f;
+    [SerializeField] public float Probability = 0.7f;
 
     private Coroutine spawnRoutine;
     private bool isSpawning = true;
@@ -67,7 +68,7 @@ public class Spawn : MonoBehaviour
         Debug.Log("Spawning Stopped");
     }
 
-    private void SpawnNpc()
+    public void SpawnNpc()
     {
         if (spawnPoints.Length == 0) return;
 
@@ -82,7 +83,7 @@ public class Spawn : MonoBehaviour
         float roll = Random.value; // 0.0 - 1.0
 
         // 70% chance → A or B
-        if (roll <= 0.7f)
+        if (roll <= Probability)
         {
             return Random.value < 0.5f ? npcPrefabA : npcPrefabB;
         }

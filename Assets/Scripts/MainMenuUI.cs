@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
-    [SerializeField] private string gameSceneName = "GameScene";
+    [SerializeField] private string gameSceneName;
+    [SerializeField] private bool isMainMenu;
 
     public void OnPlayClicked()
     {
@@ -12,6 +13,13 @@ public class MainMenuUI : MonoBehaviour
 
     public void OnQuitClicked()
     {
-        Application.Quit();
+        if(isMainMenu)
+        {
+          Application.Quit();  
+        }
+        else
+        {
+            SceneManager.LoadScene("MainScene");
+        }
     }
 }
