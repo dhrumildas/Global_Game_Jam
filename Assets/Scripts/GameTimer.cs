@@ -13,7 +13,7 @@ public class GameTimer : MonoBehaviour
     [Header("Timer Settings")]
     [SerializeField] private float GameDuration = 180f; // 3 minutes
 
-    private float elapsed;
+    public float elapsed;
     private float START_HOUR = 6f; // 6 AM
     private float TOTAL_HOURS = 12f; // From 6 AM to 6 PM
     private bool isTimerRunning = true;

@@ -16,6 +16,6 @@ public class VanishTrigger : MonoBehaviour
         }
 
         Destroy(transform.root.gameObject);
-        Debug.Log("NPC has vanished upon reaching the exit.");
+        //Debug.Log("NPC has vanished upon reaching the exit.");
     }
 }
