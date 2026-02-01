@@ -11,7 +11,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
 
     [Header("Timer Settings")]
-    [SerializeField] private float GameDuration = 120f; // 3 minutes
+    [SerializeField] private float GameDuration = 60f; // 3 minutes
 
     public float elapsed;
     private float START_HOUR = 10f; // 10 AM
