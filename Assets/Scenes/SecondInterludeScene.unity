@@ -881,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcaa3e1c0f52304291de839e9626ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: MainScene
+  gameSceneName: StageTwo
   isMainMenu: 0
 --- !u!114 &1275540765
 MonoBehaviour:
@@ -1113,9 +1113,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1275540765}
-        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
-        m_MethodName: NextSceneButton
+      - m_Target: {fileID: 1275540764}
+        m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
+        m_MethodName: OnPlayClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
