@@ -35,7 +35,7 @@ public class ForceSpawn : MonoBehaviour
         for (int x=0; x<10; x++)
         {
             ForceSeed[x] = Random.Range(((x*6)+1), ((x+1)*6));
-            SpawnerDecision[x] = Random.Range(1,8);
+            SpawnerDecision[x] = Random.Range(0,8);
         }
         Debug.Log(string.Join(", ", ForceSeed));
     }
@@ -48,12 +48,12 @@ public class ForceSpawn : MonoBehaviour
         {
             if (!(PreventOvershoot == (int)Timer.elapsed))
             {
-            Spawnscript = SpawnerArray[ForceSpawnCounter].GetComponent<Spawn>();
-            Spawnscript.Probability = 0.0f;
-            Spawnscript.SpawnNpc();
-            Spawnscript.Probability = 0.7f;
-            Debug.Log(SpawnerDecision[ForceSpawnCounter]);
-            ForceSpawnCounter++;
+                Spawnscript = SpawnerArray[SpawnerDecision[ForceSpawnCounter]].GetComponent<Spawn>();
+                Spawnscript.Probability = 0.0f;
+                Spawnscript.SpawnNpc();
+                Spawnscript.Probability = 0.7f;
+                Debug.Log(SpawnerDecision[ForceSpawnCounter]);
+                ForceSpawnCounter++;
             }
             PreventOvershoot = (int)Timer.elapsed;
         }
