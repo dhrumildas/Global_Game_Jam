@@ -249,8 +249,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next Shift
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb013c77b3b4c4445a8ab3a5fc049360, type: 2}
+  m_sharedMaterial: {fileID: 759501820823870816, guid: fb013c77b3b4c4445a8ab3a5fc049360, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -708,15 +708,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "TITLE : New Work Content (Urgent)\n\n     Dear Sir/Madam,\n     \n    
-    Due to worsening situation on tackling the transmission of \n     the new disease.
-    New work content has been issued to\n     all the mask watchers.\n\n     In addition
-    to the citizens not wearing mask, notice the law\n     enforcers if you see anyone
-    in red coat.\n\n     Best Regards,\n     Corpo Lisserop\n     \n      \n     
-    \n"
+  m_text: "TITLE : New Work Content (Urgent)\n\n     Dear Sir/Madam,\n\nDue to worsening
+    situation on tackling the transmission of the new disease. \n\nNew work content
+    has been issued to all the mask watchers. \n\nIn addition to the citizens not
+    wearing mask, notice the law enforcers if you see anyone in red coat.\n\n    
+    Best Regards,\n     Corpo Lisserop\n     \n      \n      \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 03d2a9697b6b5c84e9d27d3a708b5746, type: 2}
+  m_sharedMaterial: {fileID: -4477904316533174893, guid: 03d2a9697b6b5c84e9d27d3a708b5746, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -746,7 +745,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -801,6 +800,7 @@ GameObject:
   - component: {fileID: 1275540761}
   - component: {fileID: 1275540763}
   - component: {fileID: 1275540762}
+  - component: {fileID: 1275540765}
   - component: {fileID: 1275540764}
   m_Layer: 5
   m_Name: Panel
@@ -881,8 +881,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcaa3e1c0f52304291de839e9626ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: SecondStageScene
+  gameSceneName: MainScene
   isMainMenu: 0
+--- !u!114 &1275540765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275540760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e92264bd5726b547b2b825b1a9ea6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: {fileID: 102900000, guid: 387b165b3f103ad4aa72a781f660d3aa, type: 3}
 --- !u!1 &1599582210
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,8 +955,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fb013c77b3b4c4445a8ab3a5fc049360, type: 2}
+  m_sharedMaterial: {fileID: 759501820823870816, guid: fb013c77b3b4c4445a8ab3a5fc049360, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

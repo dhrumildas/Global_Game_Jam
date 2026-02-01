@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 1275540763}
   - component: {fileID: 1275540762}
   - component: {fileID: 1275540764}
+  - component: {fileID: 1275540765}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1015,7 +1016,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcaa3e1c0f52304291de839e9626ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: SecondInterludeScene
+  gameSceneName: MainScene
+  isMainMenu: 0
+--- !u!114 &1275540765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275540760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e92264bd5726b547b2b825b1a9ea6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: {fileID: 102900000, guid: 2e73afcd500984e44a8cea6f3544a259, type: 3}
 --- !u!1 &1599582210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,9 +1248,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1275540764}
-        m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
-        m_MethodName: OnPlayClicked
+      - m_Target: {fileID: 1275540765}
+        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
+        m_MethodName: NextSceneButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class ScoreUIManager : MonoBehaviour
+public class SecondStageScore : MonoBehaviour
 {
     [Header("TMP Text")]
     [SerializeField] private TMP_Text correctText;
@@ -44,7 +44,7 @@ public class ScoreUIManager : MonoBehaviour
     private void CheckEndDayConditions()
     {
         float ratio = (misses == 0) ? 100f : (float)correctClicks / misses;
-        float threshold = 3f / 5f;
+        float threshold = 4f / 5f;
 
         Debug.Log($"End of Day Check: Correct={correctClicks}, Misses={misses}, Ratio={ratio}, Threshold={threshold}");
         if(ratio <threshold)
@@ -59,7 +59,7 @@ public class ScoreUIManager : MonoBehaviour
 
     private void HandleNpcClicked(NPC npc)
     {
-        if (npc.Type == NPC.MaskType.MaskOff)
+        if (npc.Type == NPC.MaskType.MaskOff || npc.Color == NPC.NpcColor.Red)
             correctClicks++;
         else
             AddStrike();
@@ -92,7 +92,7 @@ public class ScoreUIManager : MonoBehaviour
 
     private void HandleNpcReachedExit(NPC npc)
     {
-        if (npc.Type == NPC.MaskType.MaskOff)
+        if (npc.Type == NPC.MaskType.MaskOff || npc.Color == NPC.NpcColor.Red)
             misses++;
 
         RefreshUI();

@@ -11,11 +11,11 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
 
     [Header("Timer Settings")]
-    [SerializeField] private float GameDuration = 180f; // 3 minutes
+    [SerializeField] private float GameDuration = 120f; // 3 minutes
 
     public float elapsed;
-    private float START_HOUR = 6f; // 6 AM
-    private float TOTAL_HOURS = 12f; // From 6 AM to 6 PM
+    private float START_HOUR = 10f; // 10 AM
+    private float TOTAL_HOURS = 7f; // From 10 AM to 5 PM
     private bool isTimerRunning = true;
 
     private void Update()
@@ -52,7 +52,7 @@ public class GameTimer : MonoBehaviour
 
     void OnDayEnded()
     {
-        Debug.Log("Day ended: 6 PM Reached");
+        Debug.Log("Day ended: 5 PM Reached");
         DayEnded?.Invoke();
     }
 }

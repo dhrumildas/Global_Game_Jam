@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    public enum NpcColor
+    {
+        Red,
+        Blue
+    }
 
     public enum MaskType
     {
@@ -26,7 +31,9 @@ public class NPC : MonoBehaviour
 
     [Header("Type")]
     [SerializeField] private MaskType maskType = MaskType.MaskOn;
+    [SerializeField] private NpcColor npcColor = NpcColor.Red;
     public MaskType Type => maskType;
+    public NpcColor Color => npcColor;
     public bool wasClicked = false;
 
     private void Awake()
