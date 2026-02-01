@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GameTimer : MonoBehaviour
 {
+    public event System.Action DayEnded;
+
     [Header("Timer UI")]
     [SerializeField] private TMP_Text timerText;
 
@@ -51,5 +53,6 @@ public class GameTimer : MonoBehaviour
     void OnDayEnded()
     {
         Debug.Log("Day ended: 6 PM Reached");
+        DayEnded?.Invoke();
     }
 }
